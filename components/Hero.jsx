@@ -345,7 +345,7 @@ export default function Hero() {
                     <p className="text-sm text-gray-600 dark:text-gray-300">Interactive prototypes with Figma.</p>
                   </div>
                 </div>
-                <a href="https://www.figma.com/design/nmOTe72GDW7LD5NWc0wCXm/Products?node-id=38-681" target="_blank" className="ml-4 mt-1 px-4 py-1 text-sm bg-black text-white rounded-full hover:bg-gray-900 transition whitespace-nowrap self-start">
+                <a href="https://www.figma.com/@Parzzii" target="_blank" className="ml-4 mt-1 px-4 py-1 text-sm bg-black text-white rounded-full hover:bg-gray-900 transition whitespace-nowrap self-start">
                   View →
                 </a>
               </motion.div>
