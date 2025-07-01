@@ -42,6 +42,7 @@ export default function Hero() {
         />
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ type: "spring", stiffness: 100, delay: 0.5 }}>
           <motion.button
+            onClick={() => window.scrollTo({ top: 500, behaviour: "smooth" })}
             whileHover={{
               scale: 1.1,
               boxShadow: "0px 0px 12px rgba(255, 165, 0, 0.6)",
