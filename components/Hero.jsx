@@ -275,7 +275,7 @@ export default function Hero() {
                     <p className="text-sm text-gray-600 dark:text-gray-300">Interactive note-taking app with rich text editing and collaboration features.</p>
                   </div>
                 </div>
-                <a href="" target="_blank" className="ml-4 mt-1 px-4 py-1 text-sm bg-black text-white rounded-full hover:bg-gray-900 transition whitespace-nowrap self-start">
+                <a href="https://github.com/Parzzii/my-notepad" target="_blank" className="ml-4 mt-1 px-4 py-1 text-sm bg-black text-white rounded-full hover:bg-gray-900 transition whitespace-nowrap self-start">
                   View →
                 </a>
               </motion.div>
