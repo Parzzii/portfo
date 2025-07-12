@@ -292,8 +292,8 @@ export default function Hero() {
                 <div className="flex items-center gap-3 mb-2">
                   <span className="text-xl">🌐</span>
                   <div>
-                    <h4 className="text-lg font-semibold">Portfolio Website</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">Responsive portfolio built with Framer Motion & Next.js.</p>
+                    <h4 className="text-lg font-semibold">🛍️ Land's End Landing Page</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">Built with Next.js, Tailwind CSS, and Framer Motion, this responsive landing page features animated product sliders, a clean UI, and modular components—perfect for showcasing product previews.</p>
                   </div>
                 </div>
                 <a href="https://github.com/Parzzii/portfolio" target="_blank" className="ml-4 mt-1 px-4 py-1 text-sm bg-black text-white rounded-full hover:bg-gray-900 transition whitespace-nowrap self-start">
