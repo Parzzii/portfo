@@ -7,5 +7,5 @@ module.exports = {
       scrollBehavior: ["motion-safe"],
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };

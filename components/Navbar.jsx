@@ -58,7 +58,7 @@ export default function Navbar() {
               const isResume = section.toLowerCase() === "resume";
 
               return (
-                <a key={section} href={isResume ? "/Ritik_Hedaoo_Frontend_Software_Engineer_Graduate.pdf" : `#${section}`} {...(isResume ? { download: true } : {})} className="relative px-4 py-1 rounded-full text-sm font-semibold">
+                <a key={section} href={isResume ? "/Ritik_Hedaoo_Frontend.pdf" : `#${section}`} {...(isResume ? { download: true } : {})} className="relative px-4 py-1 rounded-full text-sm font-semibold">
                   {/* Black pill animation only if not Resume */}
                   {!isResume && isActive && <motion.div layoutId="highlight" className="absolute inset-0 bg-black rounded-full z-0" transition={{ type: "spring", stiffness: 300, damping: 30 }} />}
                   <span className={`relative z-10 ${!isResume && isActive ? "text-white" : "text-black"}`}>{section.toUpperCase()}</span>

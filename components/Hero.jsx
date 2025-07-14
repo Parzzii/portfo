@@ -232,7 +232,7 @@ export default function Hero() {
       <motion.section id="projects" class="px-6 py-24 bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-gray-800 text-black dark:text-white scroll-mt-24">
         <h2 class="text-4xl font-bold text-center mb-16">🚀 Projects</h2>
 
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+        <div class="max-w-7xl mx-auto ">
           {/* <!-- 💻 Coding Projects --> */}
           <div>
             <div className="flex items-center justify-between mb-8">
@@ -244,40 +244,101 @@ export default function Hero() {
 
             <div className="space-y-6">
               {/* <!-- Card 1 --> */}
-              <motion.div whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300 }} className="p-5 bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition flex items-start justify-between">
-                {/* Icon + Text */}
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl">📱</span>
+              <motion.div whileHover={{ scale: 1.03, boxShadow: "0 0 30px rgba(255,165,0,0.2)" }} transition={{ type: "spring", stiffness: 300 }} className="p-10 bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition flex flex-col md:flex-row gap-10 items-start">
+                <div className="relative w-full md:max-w-xl">
+                  {/* Scrollable row */}
+                  <div id="trivia-scroll" className="flex gap-2 overflow-x-auto scrollbar-hide">
+                    <img src="/trivia1.png" className="w-[300px] h-[300px] object-cover rounded-lg border" />
+                    <img src="/trivia2.png" className="w-[300px] h-[300px] object-cover rounded-lg border" />
+                    <img src="/trivia3.png" className="w-[300px] h-[300px] object-cover rounded-lg border" />
+                    <img src="/trivia4.png" className="w-[300px] h-[300px] object-cover rounded-lg border" />
+                  </div>
+
+                  {/* Left arrow */}
+                  <button
+                    onClick={() => {
+                      const container = document.getElementById("trivia-scroll");
+                      container.scrollBy({ left: -100, behavior: "smooth" });
+                    }}
+                    className="absolute left-0 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-700 p-1 rounded-full shadow-md z-10"
+                  >
+                    ◀
+                  </button>
+
+                  {/* Right arrow */}
+                  <button
+                    onClick={() => {
+                      const container = document.getElementById("trivia-scroll");
+                      container.scrollBy({ left: 100, behavior: "smooth" });
+                    }}
+                    className="absolute right-0 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-700 p-1 rounded-full shadow-md z-10"
+                  >
+                    ▶
+                  </button>
+                </div>
+
+                {/* Text + Button */}
+                <div className="flex-1 flex flex-col justify-between">
                   <div>
-                    <h4 className="text-base font-semibold text-black dark:text-white mb-1">Trivia Quiz</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">Engaging trivia quiz application with real-time collaboration.</p>
+                    <h4 className="text-lg font-semibold text-black dark:text-white mb-1">Trivia Quiz</h4>
+                    <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                      Developed wireframes and prototypes in Figma. Constructed a scalable backend with NodeJS and MongoDB, supporting 1,000+ concurrent users. Added features like searchbar, leaderboard, added languages, and more.
+                    </p>
+                  </div>
+                  <div className="mt-4 text-right">
+                    <a href="https://github.com/Parzzii/Trivia-Quiz-App" target="_blank" className="px-4 py-2 text-sm bg-black text-white rounded-full hover:bg-gray-900 transition">
+                      View →
+                    </a>
                   </div>
                 </div>
-                {/* Button */}
-                <a href="https://github.com/Parzzii/Trivia-Quiz-App" target="_blank" className="ml-4 mt-1 px-4 py-1 text-sm bg-black text-white rounded-full hover:bg-gray-900 transition whitespace-nowrap">
-                  View →
-                </a>
               </motion.div>
 
               {/* <!-- Card 2 --> */}
-              <motion.div
-                whileHover={{
-                  scale: 1.03,
-                  boxShadow: "0 0 30px rgba(255,165,0,0.2)",
-                }}
-                transition={{ type: "spring", stiffness: 300 }}
-                className="group relative p-6 bg-white/70 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-md backdrop-blur hover:shadow-2xl transition flex items-start justify-between"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="text-xl">📝</span>
+              <motion.div whileHover={{ scale: 1.03, boxShadow: "0 0 30px rgba(255,165,0,0.2)" }} transition={{ type: "spring", stiffness: 300 }} className="p-10 bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition flex flex-col md:flex-row gap-10 items-start">
+                {/* 🖼️ Scrollable Image Carousel */}
+                <div className="relative w-full md:max-w-xl">
+                  {/* Scrollable row */}
+                  <div id="notepad-scroll" className="flex gap-2 overflow-x-auto scrollbar-hide">
+                    <img src="/img1.png" className="w-[300px] h-[300px] object-cover rounded-lg border" />
+                  </div>
+
+                  {/* Left arrow */}
+                  <button
+                    onClick={() => {
+                      const container = document.getElementById("notepad-scroll");
+                      container.scrollBy({ left: -100, behavior: "smooth" });
+                    }}
+                    className="absolute left-0 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-700 p-1 rounded-full shadow-md z-10"
+                  >
+                    ◀
+                  </button>
+
+                  {/* Right arrow */}
+                  <button
+                    onClick={() => {
+                      const container = document.getElementById("notepad-scroll");
+                      container.scrollBy({ left: 100, behavior: "smooth" });
+                    }}
+                    className="absolute right-0 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-700 p-1 rounded-full shadow-md z-10"
+                  >
+                    ▶
+                  </button>
+                </div>
+
+                {/* 📄 Text + Button */}
+                <div className="flex-1 flex flex-col justify-between">
                   <div>
-                    <h4 className="text-lg font-semibold">Notepad</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">Interactive note-taking app with rich text editing and collaboration features.</p>
+                    <h4 className="text-lg font-semibold text-black dark:text-white mb-1">📝 Notepad</h4>
+                    <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                      A rich text note-taking app with autosave and collaborative features. Built with Next.js, React Quill, and Firebase Auth. Designed clean UI components, added markdown formatting support, and implemented real-time sync across devices.
+                    </p>
+                  </div>
+                  <div className="mt-4 text-right">
+                    <a href="https://github.com/Parzzii/my-notepad" target="_blank" className="px-4 py-2 text-sm bg-black text-white rounded-full hover:bg-gray-900 transition whitespace-nowrap">
+                      View →
+                    </a>
                   </div>
                 </div>
-                <a href="https://github.com/Parzzii/my-notepad" target="_blank" className="ml-4 mt-1 px-4 py-1 text-sm bg-black text-white rounded-full hover:bg-gray-900 transition whitespace-nowrap self-start">
-                  View →
-                </a>
               </motion.div>
 
               {/* <!-- Card 3 --> */}
@@ -287,25 +348,59 @@ export default function Hero() {
                   boxShadow: "0 0 30px rgba(255,165,0,0.2)",
                 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="group relative p-6 bg-white/70 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-md backdrop-blur hover:shadow-2xl transition flex items-start justify-between"
+                className="p-10 bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-lg transition flex flex-col md:flex-row gap-10 items-start"
               >
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="text-xl">🌐</span>
+                {/* ✅ Icon + Text + Image */}
+
+                <div className="relative w-full md:max-w-xl">
+                  {/* Scrollable row */}
+                  <div id="lands-scroll" className="flex gap-2 overflow-x-auto scrollbar-hide">
+                    <img src="ecommers1.png" className="w-[300px] h-[300px] object-cover rounded-lg border" />
+                    <img src="ecommers2.png" className="w-[300px] h-[300px] object-cover rounded-lg border" />
+                    <img src="ecommers3.png" className="w-[300px] h-[300px] object-cover rounded-lg border" />
+                  </div>
+
+                  {/* Left arrow */}
+                  <button
+                    onClick={() => {
+                      const container = document.getElementById("lands-scroll");
+                      container.scrollBy({ left: -100, behavior: "smooth" });
+                    }}
+                    className="absolute left-0 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-700 p-1 rounded-full shadow-md z-10"
+                  >
+                    ◀
+                  </button>
+
+                  {/* Right arrow */}
+                  <button
+                    onClick={() => {
+                      const container = document.getElementById("lands-scroll");
+                      container.scrollBy({ left: 100, behavior: "smooth" });
+                    }}
+                    className="absolute right-0 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-700 p-1 rounded-full shadow-md z-10"
+                  >
+                    ▶
+                  </button>
+                </div>
+                <div className="flex-1 flex flex-col justify-between">
                   <div>
-                    <h4 className="text-lg font-semibold">🛍️ Land's End Landing Page</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">Built with Next.js, Tailwind CSS, and Framer Motion, this responsive landing page features animated product sliders, a clean UI, and modular components—perfect for showcasing product previews.</p>
+                    <h4 className="text-lg font-semibold text-black dark:text-white mb-1">🛍️ Land's End Landing Page</h4>
+                    <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed">Built with Next.js, Tailwind CSS, and Framer Motion, this responsive landing page features animated product sliders, a clean UI, and modular components—perfect for showcasing product previews.</p>
+                  </div>
+                  <div className="mt-4 text-right">
+                    {/* ✅ Button to right */}
+                    <a href="https://github.com/Parzzii/portfolio" target="_blank" className="ml-4 mt-1 px-4 py-1 text-sm bg-black text-white rounded-full hover:bg-gray-900 transition whitespace-nowrap self-start">
+                      View →
+                    </a>
                   </div>
                 </div>
-                <a href="https://github.com/Parzzii/portfolio" target="_blank" className="ml-4 mt-1 px-4 py-1 text-sm bg-black text-white rounded-full hover:bg-gray-900 transition whitespace-nowrap self-start">
-                  View →
-                </a>
               </motion.div>
             </div>
           </div>
 
           {/* <!-- 🎨 Figma Projects --> */}
 
-          <div>
+          <div className="mt-16">
             <div className="flex items-center justify-between mb-8">
               <h3 className="text-2xl font-bold">🎨 Figma Projects</h3>
               <a href="https://www.figma.com/@Parzzii" target="_blank" className="px-4 py-2 rounded-full border border-black dark:border-white text-black dark:text-white text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition">
@@ -413,7 +508,7 @@ export default function Hero() {
           {/* 📄 Resume Download */}
           <motion.a
             whileHover={{ scale: 1.05 }}
-            href="/Ritik_Hedaoo_Frontend_Software_Engineer_Graduate.pdf" // Make sure this file is in your public folder
+            href="/Ritik_Hedaoo_Frontend.pdf" // Make sure this file is in your public folder
             download
             className="flex flex-col items-center justify-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-md hover:shadow-xl transition-all text-center"
           >
